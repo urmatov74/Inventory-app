@@ -1,9 +1,9 @@
 <template>
   <div>
-    <v-navigation-drawer permanent :width="180" >
-      <v-divider></v-divider>
+    <v-navigation-drawer permanent :width="180">
+      
       <v-list dense nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
+        <v-list-item v-for="item in items" :key="item.title" :to="item.link">
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
@@ -25,15 +25,18 @@
       return {
         items: [{
             title: 'Dashboard',
-            icon: 'mdi-view-dashboard'
+            icon: 'mdi-view-dashboard',
+            link: '/Dashboard'
           },
           {
             title: 'Production',
-            icon: 'mdi-cog-outline'
+            icon: 'mdi-cog-outline',
+            link: '/production'
           },
           {
             title: 'Warehouse',
-            icon: 'mdi-warehouse'
+            icon: 'mdi-warehouse',
+            link: '/warehouse'
           },
         ],
         right: null,
@@ -43,9 +46,7 @@
 </script>
 
 <style scoped>
-  .nav-bar {
-    position: relative;
-  }
+  
 </style>
 
 
