@@ -1,52 +1,44 @@
 <template>
-  <div id="app">
-    <Header />
-    <Cards v-bind:cards="cards" />
-  </div>
+  <v-app>
+    <v-app-bar app color="blue" dark>
+      <v-toolbar-title>Inventory</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <v-main>
+      <div class="main-cont">
+        <NavBar />
+        <Cards />
+      </div>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-  import Header from './components/Header';
+  import NavBar from './components/NavBar';
   import Cards from './components/Cards';
+  
   export default {
     name: 'App',
     components: {
-      Header,
+      NavBar,
       Cards
     },
-    data() {
-      return {
-        items: [{
-            id: 1,
-            title: "one"
-          },
-          {
-            id: 2,
-            title: "two"
-          },
-          {
-            id: 3,
-            title: "three"
-          }
-        ],
-        cards: [{
-            id: 1,
-            title: "first"
-          },
-          {
-            id: 2,
-            title: "second"
-          },
-          {
-            id: 3,
-            title: "third"
-          }
-        ]
-      }
-    }
-  }
+    data: () => ({
+      //
+    }),
+  };
 </script>
 
 <style>
-
+  
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main-cont {
+    display: flex;
+  }
 </style>

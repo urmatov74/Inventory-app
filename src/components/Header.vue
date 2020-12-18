@@ -1,31 +1,23 @@
 <template>
-    <div class="row">
-        <h1 class="app-name left">Inventory</h1>
+    <div class="header">
+        <v-card class="overflow-hidden">
+            
+            <v-sheet id="scrolling-techniques-7" class="overflow-y-auto" max-height="600">
+                <v-container class="nav-container" style="height: 50px;">
+                </v-container>
+            </v-sheet>
+        </v-card>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Header"
+        name: 'Header'
     }
 </script>
 
 <style scoped>
-
-    .row {
-        background-color: #205c7e;
-        color: #FFF;
-        margin: 0;
-        padding: .2em;
-        overflow: hidden;
-    }
-    .app-name {
-        font-family: 'Yesteryear', cursive;
-        color: #fff;
-        font-weight: 500;
-        font-size: 2em;
-        margin: 0;
-        padding: 0;
-        text-indent: .5em;
+    .header {
+        padding: 1px;
     }
 </style>
