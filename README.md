@@ -14,6 +14,7 @@ npm run serve
 ```
 npm run build
 ```
+### Open a browser link http://localhost:8080/
 
 ### Lints and fixes files
 ```
