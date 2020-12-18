@@ -1,4 +1,4 @@
-# inventory_web
+# inventory
 
 ## Project setup
 ```

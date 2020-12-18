@@ -1,5 +1,24 @@
 
 <template>
+  <v-app>
+    <v-app-bar app color="blue" dark>
+      <v-toolbar-title>Inventory</v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn icon>
+        <v-icon>mdi-logout</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <v-main>
+      <div class="main-cont">
+        <NavBar />
+        <Cards />
+      </div>
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+  import NavBar from './components/NavBar';
   <Header />
   <div class="container mt-5">
     <div class="row">
@@ -18,12 +37,17 @@
   import uuid from 'uuid';
   import Header from './components/Header';
   import Cards from './components/Cards';
+  
   export default {
     name: 'App',
     components: {
-      Header,
+      NavBar,
       Cards
     },
+    data: () => ({
+      //
+    }),
+  };
     data() {
       return {
         newTask: "",
@@ -88,5 +112,12 @@
 </script>
 
 <style>
-
+  
+  html {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .main-cont {
+    display: flex;
+  }
 </style>
